@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallery</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>Green</h1>
     <div class="container">
         <ul class="gallery">
+            <!-- Hutan -->
             <li>
-                <img src="img/thumbs/11.jpg" alt="Green Hutan">
-                <span>Captain America</span>
+                <a href="#gambar-1">
+                    <img class="thumbs" src="img/thumbs/11.jpg" alt="Hutan">
+                    <span>Hutan</span>
+                    <!-- span default displaynya inline 
+                        tdak bisa di atur width dan heightnya -->
+                </a> 
+                <!--  -->
+                <div class="overlay" id="#gambar-1" >
+                    <!-- <a href="#" class="close">x close</a>
+                    Href # unt. menghilangkan id gambar-1 di urlnya (kembali ke home gallery) -->
+                    <!-- <img src="img/full/1.jpg" alt="Hutan"> -->
+                </div>
+                     <!-- ini berarti kalau ku klik linknya 
+                        dia akan menuju ke overlay-nya  
+                         karena tujjuan link a hrefnya id 
+                        yang ada di overlay   -->
             </li>
+            <!-- Lembah Hijau -->
+            <li>
+                    <a href="">
+                        <img class="thumbs" src="img/thumbs/22.jpg" alt="Lembah Hijau">
+                        <span>Lembah Hijau</span>
+                        <!-- span default displaynya inline 
+                            tdak bisa di atur width dan heightnya -->
+                    </a>
+            
+            </li>
+            <!-- Padang Rumput -->
+            <li>
+                    <a href="">
+                        <img class="thumbs" src="img/thumbs/33.jpg" alt="Padang Rumput">
+                        <span>Padang Rumput</span>
+                        <!-- span default displaynya inline 
+                            tdak bisa di atur width dan heightnya -->
+                    </a>
+            </li>
+            <!-- Rimbun Daun -->
+            <li>
+                    <a href="">
+                        <img class="thumbs" src="img/thumbs/44.jpg" alt="Rimbun Daun">
+                        <span>Rimbun Daun</span>
+                        <!-- span default displaynya inline 
+                            tdak bisa di atur width dan heightnya -->
+                    </a>
+            </li>
+           <!-- Li di tambahkan jika benar2 sudah ok -->
+            <!-- sintaks clear unt. mengakhiri float -->
+            <div class="clear"></div>
         </ul>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,145 @@
+/* Font */
+/* sintaks menambahkan font baru */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../fonts/bebasneue-regular-webfont.woff2) format('woff2');
+}
+/* style Utama */
+/* bagian pertama */
+body {
+    font: 18px/36px 'BebasNeue', 'Arial Narrow', Arial, Sans-Serif; 
+    background-color: #ddd;
+}
+h1  {
+    font-size: 80px;
+    text-align: center;
+    margin: 50px auto;  
+    text-shadow: 1px 1px 1px white;
+}
+.container {
+    width: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .3);
+    /* dibaca x=0 y=0 spread(tebal/meluas bayangan)=3px blur=3px 
+        rgba/warna unt. transparansi=hitam transparant 0.5/50%*/
+    border-radius: 5px;
+}
+.gallery {
+    position: relative;
+}
+.gallery li {
+    margin-left: 12px;
+    border: 3px solid #cecece;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    /* menit 27 */
+    position: relative;
+}
+/* pengaturan gambar */
+/* mudahnya dari ketik w,h,b,rad terus mendng gini */
+.gallery li,
+.gallery li .thumbs,
+.gallery li span {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/* pengaturan li */
+.gallery li span{
+    /* asalnya displaynya inline */
+    display: block;
+    background-color: rgba(200,200,200,.5);
+    line-height: 120px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    font-size: 23px;
+    color: #333;
+    text-shadow: 1px 1px 1px #cecece;
+    /* keadaan awal sebelum hover */
+    opacity: 0;
+    transition: .3s;
+    transform: scale(0) rotate(0)
+    
+}
+/* ketika a yang didalam li ini di hover 
+    maka span didalamnya solid,
+    saloid dalam artia dia muncul sabagaimana 
+    settingan css awalnya */
+.gallery li a:hover span{
+    opacity: 1;
+    /* buat munculnya mutar */
+    transform: scale(1) rotate(360deg);
+
+}
+/* sintaks unt. mengakhiri float */
+.clear {
+    clear: both;
+}
+/* akhir sintaks clear(sebelum ul penutup) */
+
+
+/* css Overlay/ Lightboxnya */
+/* overlay adlah keadaan awalnya, sebelum memunculkan lightbox */
+/* .overlay { 
+    width: 0;
+    height: 0; */
+    /* overflow: hidden; */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+    /* position non statis yang mengjadikan 
+    elementnya stagnan apapun yang terjadi */
+   
+    /* tag2 ini akan menjadikan 
+        halamannya tertag penuh(halaman=parentnya)*/
+    /* transition: .6s; */
+    /* background-color: rgba(0,0,0,.7); */
+    /* text-align: center; */
+    /* text-align: center; */
+   
+}
+/* css Overlay keadaan akhir */
+/* pseudoclass target 
+memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
+/* .overlay:target {
+    width: auto;
+    height: auto;
+    padding: 100px;
+    z-index: 9999; */
+    /* mengatur tumpukan element nonstatic
+        mudahnya beri angka tertinggi */
+/* }
+.overlay img {
+    max-height: 100%;
+    box-shadow: 2px 2px 7px 0px rgba(0,0,0,.5);
+    
+} */
+/* .overlay:target img {
+    animation: zoomdanfade 1s;
+
+} */
+/* .overlay .close {
+    position: absolute;
+    
+} */
+/* supaya lebih menarik gambarnya di buat zoom-in */
+/* animasi */
+/* @keyframes zoomdanfade { */
+    /* dari tidak ada */
+    /* 0% {
+        transform: scale(0);
+        opacity: 0;
+    } */
+    /* muncul normal */
+    /* 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+} */
+/* buat tombol close */
