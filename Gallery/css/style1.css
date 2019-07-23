@@ -144,6 +144,16 @@ memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
 .overlay:target .close {
     animation: slidedownfade .5s .5s forwards;
 }
+.next {
+    width: 50px;
+    height: 45px;
+    background-image: url(../img/next.png);
+    position: absolute;
+
+}
+
+
+
 /* animasi */
 /* setelah selesai animasi dia akan kembali ke keadaan awal */
 @keyframes zoomdanfade {
