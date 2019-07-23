@@ -136,8 +136,11 @@ memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
     /* nampak seperti ada padding padahal tidak ada */
     /* itu adalah line-height, maka kita reset aja */
    
-    line-height: 15px;
+    line-height: 15px; 
     padding: 5px;
+}
+.overlay:target .close {
+    animation: slidedownfade .5s .5s;
 }
 /* animasi */
 @keyframes zoomdanfade {
@@ -150,5 +153,15 @@ memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+@keyframes slidedownfade {
+    0% {
+        opacity : 0;
+        margin-top: -20px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
     }
 }
