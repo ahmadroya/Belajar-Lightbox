@@ -138,11 +138,14 @@ memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
    
     line-height: 15px; 
     padding: 5px;
+    /* close di awal harusnya nggak ada dulu */
+    opacity: 0;
 }
 .overlay:target .close {
-    animation: slidedownfade .5s .5s;
+    animation: slidedownfade .5s .5s forwards;
 }
 /* animasi */
+/* setelah selesai animasi dia akan kembali ke keadaan awal */
 @keyframes zoomdanfade {
     /* dari tidak ada */
     0% {
