@@ -144,18 +144,40 @@ memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
 .overlay:target .close {
     animation: slidedownfade .5s .5s forwards;
 }
-.next {
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fadeajah .5s .5s forwards;
+    /* perhatikan kondisiawal di kodingannya harus sesuai kondisi 0% di animationnya */
+}
+.next, .prev {
     width: 50px;
     height: 45px;
     background-image: url(../img/next.png);
     position: absolute;
+    top: 45%;
+    margin-left: 50px;
+    opacity: 0;
 
+}
+.prev {
+    background-image: url(../img/prev.png);
+    margin-left: -100px;
 }
 
 
 
 /* animasi */
 /* setelah selesai animasi dia akan kembali ke keadaan awal */
+@keyframes fadeajah {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 @keyframes zoomdanfade {
     /* dari tidak ada */
     0% {
