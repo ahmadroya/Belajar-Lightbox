@@ -103,6 +103,9 @@ h1  {
     /* background-color: rgba(0,0,0,.7); */
     /* text-align: center; */
     /* text-align: center; */
+    /* z-index: 9999; */
+    /* mengatur tumpukan element nonstatic
+        mudahnya beri angka tertinggi */
    
 /* } */
 /* css Overlay keadaan akhir */
@@ -111,10 +114,8 @@ memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
 /* .overlay:target {
     width: auto;
     height: auto;
-    padding: 100px;
-    z-index: 9999; */
-    /* mengatur tumpukan element nonstatic
-        mudahnya beri angka tertinggi */
+    padding: 100px; */
+  
 /* }
 .overlay img {
     max-height: 100%;

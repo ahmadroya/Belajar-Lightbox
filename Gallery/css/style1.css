@@ -77,3 +77,38 @@ h1  {
     clear: both;
 }
 /* akhir sintaks clear(sebelum ul penutup) */
+
+
+/* Overlay */
+/* css Overlay/ Lightboxnya */
+/* overlay adlah keadaan awalnya, sebelum memunculkan lightbox */
+.overlay { 
+    /* width: 0; */
+    /* height: 0; */
+    /* overflow: hidden; */
+    position: fixed;
+    top: 0;
+    left: 0;
+      
+    z-index: 9999;
+    /* position non statis yang mengjadikan 
+    elementnya stagnan apapun yang terjadi */
+   
+    /* tag2 ini akan menjadikan 
+        halamannya tertag penuh(halaman=parentnya)*/
+    /* transition: .6s; */
+    background-color: rgba(0,0,0,.7);
+    /* text-align: center; */
+    /* text-align: center; */
+   
+}
+/*css Overlay keadaan akhir */ 
+/* pseudoclass target 
+memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
+.overlay:target {
+    bottom: 0;
+    right: 0;    
+    /* width: auto; */
+    /* height: auto; */
+    /* padding: 100px; */
+}
