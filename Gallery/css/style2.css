@@ -20,7 +20,7 @@ h1  {
     width: 600px;
     background-color: white;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, .3);
     /* dibaca x=0 y=0 spread(tebal/meluas bayangan)=3px blur=3px 
         rgba/warna unt. transparansi=hitam transparant 0.5/50%*/
@@ -37,6 +37,7 @@ h1  {
     margin-right: 10px;
     /* menit 27 */
     position: relative;
+    border-radius: 50%;
 }
 /* pengaturan gambar */
 /* mudahnya dari ketik w,h,b,rad terus mendng gini */
@@ -103,7 +104,7 @@ h1  {
     /* text-align: center; */
     /* text-align: center; */
    
-}
+/* } */
 /* css Overlay keadaan akhir */
 /* pseudoclass target 
 memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
