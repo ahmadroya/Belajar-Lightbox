@@ -11,6 +11,7 @@ body {
     background-color: #ddd;
 }
 h1  {
+    color: rgba(11, 117, 20, 0.959);
     font-size: 80px;
     text-align: center;
     margin: 50px auto;  
@@ -114,39 +115,48 @@ memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
     background-color: rgba(0,0,0,.8);  
     width: auto;
     height: auto;
-    padding: 100px;
+    padding: 50px;
 }
 .overlay .full {
     max-height: 100%;
     box-shadow: 2px 2px 7px 0px rgba(0,0,0,.5);
+    border: 5px solid whitesmoke;
 }
 .overlay:target .full {
-    animation: zoomdanfade 1s;
+    animation: fadeajah 1s;
+    /* berarti di kondisi ini animasi zoomdanfade sdah tidak digunakan lagi  */
 
 }
 
 .overlay .close {
+    background-image: url(../img/close.png);
     position: absolute;
-    top: 50px;
+    top: 10px;
     left: 50%;
     margin-left: -25px;
     text-decoration: none;
+    color: whitesmoke;
     background-color: black;
     border: 1px solid white;
+    border-radius: 5px;
     /* nampak seperti ada padding padahal tidak ada */
     /* itu adalah line-height, maka kita reset aja */
    
     line-height: 15px; 
-    padding: 5px;
+    padding: 14px;
     /* close di awal harusnya nggak ada dulu */
     opacity: 0;
+    background-color: #cecece;
 }
 .overlay:target .close {
-    animation: slidedownfade .5s .5s forwards;
+    animation: slidedownfade 1s .5s forwards;
 }
-.overlay:target .next,
+.overlay:target .next{
+    animation: fadeajah 1s .5s forwards;
+    /* perhatikan kondisiawal di kodingannya harus sesuai kondisi 0% di animationnya  */
+}
 .overlay:target .prev {
-    animation: fadeajah .5s .5s forwards;
+    animation: fadeajah 1s .7s forwards;
     /* perhatikan kondisiawal di kodingannya harus sesuai kondisi 0% di animationnya */
 }
 .next, .prev {
