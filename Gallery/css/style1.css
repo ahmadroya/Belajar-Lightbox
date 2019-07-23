@@ -26,6 +26,7 @@ h1  {
         rgba/warna unt. transparansi=hitam transparant 0.5/50%*/
     border-radius: 5px;
 }
+
 .gallery li {
     width: 120px;
     height: 120px;
@@ -38,7 +39,7 @@ h1  {
     position: relative;
 }
 .gallery li,
-.gallery li img,
+.gallery li .thumbs,
 .gallery li span {
     border-radius: 50%;
 
@@ -83,9 +84,12 @@ h1  {
 /* css Overlay/ Lightboxnya */
 /* overlay adlah keadaan awalnya, sebelum memunculkan lightbox */
 .overlay { 
-    /* width: 0; */
-    /* height: 0; */
-    /* overflow: hidden; */
+    /* w, h overflow hidden buat sembunyikan gambar */
+    /* w dan h harus di cantumkan nilai satuannya
+    ternyata tidak harus pakai satuan */
+    width: 0;
+    height: 0;
+    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -96,10 +100,9 @@ h1  {
    
     /* tag2 ini akan menjadikan 
         halamannya tertag penuh(halaman=parentnya)*/
-    /* transition: .6s; */
-    background-color: rgba(0,0,0,.7);
-    /* text-align: center; */
-    /* text-align: center; */
+    /* transition: .8s; */
+    background-color: rgba(0,0,0,0);
+    text-align: center;
    
 }
 /*css Overlay keadaan akhir */ 
@@ -107,8 +110,45 @@ h1  {
 memungkinkan link memunculkan perubahan(Lightbox) setelah di klik */
 .overlay:target {
     bottom: 0;
-    right: 0;    
-    /* width: auto; */
-    /* height: auto; */
-    /* padding: 100px; */
+    right: 0;
+    background-color: rgba(0,0,0,.8);  
+    width: auto;
+    height: auto;
+    padding: 100px;
+}
+.overlay .full {
+    max-height: 100%;
+    box-shadow: 2px 2px 7px 0px rgba(0,0,0,.5);
+}
+.overlay:target .full {
+    animation: zoomdanfade 1s;
+
+}
+
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -25px;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    /* nampak seperti ada padding padahal tidak ada */
+    /* itu adalah line-height, maka kita reset aja */
+   
+    line-height: 15px;
+    padding: 5px;
+}
+/* animasi */
+@keyframes zoomdanfade {
+    /* dari tidak ada */
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    /* muncul normal */
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
